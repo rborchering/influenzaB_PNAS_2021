@@ -1,5 +1,5 @@
-# InfluenzaB-2020
-This repository contains the data and code used to analyze the 2019/2020 flu season. 
+# influenzaB_PNAS_2021
+This repository contains the data and code used to analyze the 2019/2020 influenza season in the United States.
 
 ## Data
 * FluView Data: most recently accesed Febrary 28, 2020.
@@ -10,12 +10,13 @@ source: https://gis.cdc.gov/grasp/fluview/fluportaldashboard.html
 
 ## Prerequisites
 * R, and the R packages listed [here](./src/libraries.R).
+* Note: the tinytex package requires a local install (once per machine). See https://yihui.org/tinytex/ 
 
 ## Instructions
 * In R: 
-    - Download `extra/extra.zip` from gdrive and unzip into `./extra`.
-    - Run all analysis from project root dir: `source("0make.R")`
-    - Build document `source("0build.R")`
+    - In the root directory, run `source("0build.R")`.
+    - This file calls "0make.R" to run R analyses and generate R figures.
+    
 
 ## Additional Details
 * For details regarding extra files see [here](extra/README.md).
