@@ -1,0 +1,71 @@
+%% fig 1
+\newcommand{\capTiming}{
+Timing of influenza Type A and Type B epidemics in the United States. \textbf{A)} Weekly national total of positive samples by type (see \textit{SI Appendix}, Fig. \ref{fig:samples} for total number of samples tested weekly by state).  \textbf{B)} Proportion positive samples of Type B (weekly median of all states). Gray shows periods of limited reporting (less than $50\%$ of states reporting positive samples).  \textbf{C)} Weekly state-level proportion of positive samples that are Type B. Gray indicates weeks lacking positive samples (either because positive A and positive B counts were both reported as zero, or because one or more of these counts was not reported). States are organized from north to south (top to bottom). Weekly state-level Type A and Type B positive samples per 100,000 individuals are presented in \textit{SI Appendix}, Figs. \ref{fig:samples_a} and \ref{fig:samples_b}, respectively. 
+}
+
+%% fig 2
+\newcommand{\capPeak}{
+Relative timing of positive influenza samples of Type A and Type B. 
+\textbf{A-B)} For each state and influenza season (excluding the 2019 season), we identify the week with the largest number of positive Type A samples per 100,000 individuals. We then recenter these peak weeks at week zero, and consider other weeks of each season relative to their corresponding peak A reference week.  We then summarize the distribution of positive samples in each relative week (median in black, IQR and 80\%CI in dark and light shading, respectively). In \textbf{C-D)}, we repeat this analysis for the (incomplete) 2019 season (and thus contain fewer observations). Panels A and C show Type A (red); panels B and D show Type B (blue). See also Figure \ref{fig:peak-si}.
+%\textbf{A-D)} For each influenza season and state (excluding season 2019), the week with the highest number of positive samples (per 100,000 individuals) of Type A (red) or Type B (blue) is recentered at week zero. Values for other weeks of the season are considered relative to the corresponding peak week. Panels A and B show the timing of positive samples relative to the season peak week of the same influenza type (e.g., A vs. A), whereas Panels C and D show timing relative to the season peak week of the other influenza type (e.g., A vs. B). (median in black, interquartile ranges (IQRs) and 80$\%$ intervals displayed with dark and light shading).  
+\textbf{E)} Generalized additive model fit showing, for each season (indicated by color), the expected weekly difference (per 100,000 individuals) in positive samples between Types A and B (gray shading shows 95\% CI). Observed values for each week-state pair are displayed for each season in \textit{SI Appendix}, Fig.~\ref{fig:totals-dist-season}. 
+\textbf{F)} Phase lag between weekly Type A and Type B samples for weeks within seasons 2010 to 2019 (median, IQR indicated by boxplot). Dominant periods for each time series were calculated using wavelet transform, with relevant phases extracted from filtered time series using a low-pass filter with cut-off period of one year (see Methods) \textbf{G)} Performance of season-specific GAM models of weekly proportion positive samples that are Type B, displayed as model residuals (the difference between observed and predicted proportions, see Methods, \textit{SI Appendix}, Figs.~\ref{fig:obs-v-predicted} and \ref{fig:residual-density}). %. Model residuals from early-season weeks: difference between the weekly (per state) observed proportion of Type B samples (out of all positive samples) and out-of-sample GAM predictions thereof (see Methods for details). %For Panels A-D and F, median, interquartile range (IQR), and 80$\%$ interval values are displayed.
+}%%averaged across states
+
+%% fig 3
+\newcommand{\capPhylo}{
+%Evolutionary dynamics of influenza B/Victoria in the U.S.
+Phylodynamic analysis of Influenza B/Victoria viruses in the U.S. \textbf{A-B)} Relative genetic diversity of HA and NA gene segments estimated using a Bayesian Skyride model with Gaussian Markov random field (GMRF) smoothing. \textbf{C-D)} Reconstructed temporal phylogenies for HA and NA gene segments, respectively. Tip color on phylogenies denotes subclades (V1A.1-3) determined by the HA gene segment. 
+}
+
+%% fig 4
+\newcommand{\capDynoSim}{
+Simulation study reflecting dynamic effects of cross-protection ($\chi_{AB}=\chi_{BA}=\chi$) and relative changes in type specific $R_0$s. \textbf{A)} Depicts the difference in the epidemic phases of Types A and B (top) and the peaks ratios (bottom) of the two influenza types with relative changes of $R_0^B$ with respect to $R_0^A$ (x-axis). \textbf{B)} displays epidemic dynamics (cases per 100,000) for the two types resulting from parameter values selected at points (a), (b), (c) and (d) in \textbf{A}. $R_0^A$ is fixed at 2, duration of cross protection is fixed %($1/\phi$) 
+at 1 month. Type-specific immunity is assumed to last 4 years for both types. %The model was integrated for 750 years prior to the three analyzed years. 
+See \textit{SI Appendix}, Fig. \ref{fig:simulation_plots_supp} for results assuming that Type B-specific immunity lasts longer than Type A-specific immunity.      
+}
+
+
+\newcommand{\capDynoSimSupp}{
+Simulation study demonstrating dynamic effects of cross-protection and changes in type-specific $R_0$s when the duration of natural immunity differs between influenza types. Type-specific duration of natural-immunity for Type A and Type B was set to be 4 years and 10 years respectively. \textbf{A)} Shows changes in the peak case ratio (top) and phase-difference in the peak weeks (bottom) of the two influenza types with relative changes of $R_0^B$ with respect to $R_0^A$
+(x-axis) and cross-protection ($\chi$). \textbf{B)} displays epidemic-dynamics
+(cases per 100,000) of the two influenza types using parameter values at points
+(a), (b), (c), and (d) in \textbf{A}. $R_0^A$ is fixed at
+2 and the duration of cross-protection ($\frac{1}{\phi}$) is set to 1 month.
+$\chi$ is assumed to be symmetric across the two influenza types. 
+}
+%in lieu of asymmetric duration of natural immunity
+%% Arash phase SI figs
+\newcommand{\capPhaseLag}{
+Pre-processing and calculation steps to find phase lag between influenza Types A and B demonstrated for the state of Minnesota \textbf{A)}. Raw time series ($\text{Number of A(B) samples}/(\text{Number of A samples + Number of B samples})$) \textbf{B)} Standardized and normalized time series. \textbf{C)} Instantaneous wrapped phase angle obtained via Hilbert transform after filtering the time series around the period of 1-year. \textbf{D)} Wrapped phase angle. \textbf{E)} Phase lag between Type A and Type B. Displayed as the instantaneous phase lag between the two time series at the first week of February of each year. 
+}
+
+%% fig 5
+
+\newcommand{\capVaRSuscBl}{
+ Illustration of our hypothesis.  \textbf{A)}   Simulation experiments demonstrating susceptible dynamics (dotted lines) and the corresponding relative timing and amplitude of influenza A (solid red line) and influenza B (solid blue lines). For influenza B, we depict three distinct scenarios: $R_0^B$ is either low throughout ($=1.56$), high throughout ($=2.41$), or  $R_0^B$ starts low ($=1.56$),  but increases ($=2.41$) at the start of the 2019 season (highlighted in orange). The associated effective reproductive numbers ($R_{\mbox{eff}}=R_0\times \frac{S}{N}$) are presented in panel \textbf{C)}. Panels \textbf{B)} \& \textbf{D)} present similar information to \textbf{A)} \& \textbf{C)} but perform an alternative experiment, testing whether the absence of an influenza B outbreak in the 2018/2019 season highlighted in gray and resulting accumulation of susceptible individuals alone would explain the anomalous dynamics in influenza season 2019.  Parameter values are presented in Table~\ref{tab:model_fit} and Table~\ref{tab:model_fits_2019}).
+}
+
+\newcommand{\capPeakSi}{
+Relative timing of positive influenza samples of Type A and Type B. As in Figure \ref{fig:aligned-peaks-totals-dist} A-D, using peak weeks of Type B (within each state and season) as the reference for week zero.  
+\textbf{A-B)} For each state and influenza season (excluding the 2019 season), the week with the highest number of positive samples (per 100,000 individuals) we identify the peak week containing the most positive samples of Type B. We then recentered this week at week zero, and consider other weeks of each season relative their corresponding peak week.  We then summarize the distribution of positive samples in each relative week (median in black, IQR and 80\%CI in dark and light shading, respectively). In \textbf{C-D)}, we repeat this analysis for the 2019 season (with fewer observations). Panels A and C show Type A (red); panels B and D show Type B (blue).
+}
+
+\newcommand{\capCwtA}{
+Continuous wavelet analysis of Type A influenza samples in the US.}
+
+\newcommand{\capCwtB}{
+Continuous wavelet analysis of Type B influenza samples in the US.}
+
+
+\newcommand{\capTsRecon}{
+Original vs. reconstructed time series by autoencoder for the state of Minnesota.
+}
+
+\newcommand{\capTsAnom}{
+Detected anomalous segments by the autoencoder for the state of Minnesota \textbf{A)} The Normalized Root Mean Square Error (NRMSE) of reconstructed time series, the x-axis shows the date of the right edge of reconstruction windows. The 95th percentile error for national (all the states) and state data are shown in blue and red dashed lines respectively. \textbf{B)} Detected anomalous segments along the time series. The red shaded regions illustrate the anomalous reconstruction window and red dots represent the left edge of the corresponding reconstruction windows.
+}
+
+\newcommand{\capTsThresh}{
+Number of states going above the threshold for different values of the anomaly threshold.
+}

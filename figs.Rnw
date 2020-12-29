@@ -1,0 +1,253 @@
+\documentclass[11pt]{article}
+
+%% latex packages
+%% let tinytex handle dependencies
+\input{preamble.sty}
+%% margins
+\usepackage[top=0.75in,bottom=0.75in,right=1.5in,left=1.5in]{geometry}
+\usepackage{titling}
+
+\title{Anomalous influenza seasonality in the United States and the emergence of novel influenza B/Victoria viruses}
+\author{Borchering et al.}
+\date{\today}
+
+%% pdf metadata
+\hypersetup{
+    pdftitle={\thetitle}
+}
+
+%% Main text table refs (hyperref system)
+\newlabel{tab:model_fit}{{1}{}{}{}{}}
+\newlabel{tab:sirs_model_symbols}{{2}{}{}{}{}}
+
+\begin{document}
+\maketitle
+
+%% Info header page
+%{\scriptsize
+%\begin{itemize}
+%\item This document was built on \today.
+
+%%To be added
+%\item Repository: \url{https://github.com/rborchering/InfluenzaB-2020}
+%%%\item Google Drive Folder: \url{...}
+%\end{itemize}
+%}
+\clearpage
+
+%% Begin code / figures
+<<setup, include=F, cache=F>>=
+## set to F to disable caching
+do.cache <- T
+source('plotting/knitr.defaults.R')
+##
+@
+
+<<make-fast, include=F, cache=F>>=
+source('0make-fast.R')
+@
+%% Rerun chunk as needed
+%% Note - caching is tricky: 
+%% https://yihui.org/en/2018/06/cache-invalidation/
+<<make-slow, include=F, cache=(do.cache && exists('lmod.loo.season')), cache.extra = tools::md5sum('02-Scripts/glmer')>>=
+## cache slow-running stuff
+source('0make-slow.R')
+@
+<<make-plots, include=F, cache=F>>=
+source('0make-plots.R')
+@
+
+%% Captions live here, share with overleaf.tex
+\input{captions}
+\newcommand{\capLoad}{tracker variable}
+
+%\section*{Main Text: Figures and Tables}
+
+<<prop-b-w-total-samples, fig.cap='\\capTiming', fig.height=10, out.width=outwidth[1], fig.width=figwidth[1]>>=
+.nudge_left <- 0.5
+plot_grid(
+    p.positive.national 
+        + gg.plot.mar(t=-0.45,r=.nudge_left,b=1.2,l=0.2) 
+        + gg.leg.pos(c(0.23, 0.675)) 
+        + theme( legend.direction='horizontal'),
+    p.median.prop.b + gg.plot.mar(t=0.5,r=.nudge_left,b=0,l=0.73)+ theme(
+        legend.position = "bottom",
+        legend.justification='left',
+        legend.margin = margin(-1.25,0,0.5,-1.2, unit='line')
+    ) + guides(fill=guide_legend(ncol=1)),
+    p.prop.b + gg.plot.mar(t=-1,r=.nudge_left, b=0,l=0.89) + theme(
+        panel.grid.major.y=element_blank(),
+        legend.position = "top",
+        legend.justification='right',
+        #legend.justification=c(0.85, 0.5),
+        legend.margin = margin(-1.75,0.5,-0.5,0, unit='line')
+    ),
+    #align = "v", 
+    nrow = 3, 
+    rel_heights = c(1.4/10, 1.8/10, 7/10),
+    labels=c("A","B","C"),
+    label_size=lab.size,
+    label_y=c(1,1.1,1),
+    label_x=0
+)
+@
+
+<<aligned-peaks-totals-dist, fig.cap='\\capPeak', fig.height=8, out.width=outwidth[2], fig.width=figwidth[2]>>=
+
+## see plotting/aligned_peaks.R
+## row 1: p.peaks.main
+row.1 <- (
+    p.peaks.main 
+    + gg.leg.pos(c(0.005, 1.02)) 
+    + theme(
+        legend.justification=c(0,1),
+        panel.spacing.x=unit(1.6, 'lines'),
+        panel.spacing.y=unit(0.5, 'lines'),
+        strip.text.x = element_text(size=gg.font.base),
+        strip.text.y = element_blank(),
+        strip.background = element_blank()
+    )
+    + gg.plot.mar(t=0.2, r=0.2, b=0.5, l=0.5)
+) 
+
+row.2 <- arrangeGrob(
+    ## pull out legend and plot separate,
+    ## add padding on top/bottom
+    (p.totals.dist + gg.leg.none + coord_cartesian(xlim=c(1,38)) + gg.plot.mar(t=1, b=1)),
+    get_legend(p.totals.dist),
+    ncol=2, widths=c(0.90, 0.1)
+)
+
+row.3 <- arrangeGrob(
+    p.phase.diff.box + gg.xrot + gg.plot.mar(r=1.2, t=0),
+    p.pred.diff.box+gg.xrot + gg.plot.mar(t=0),
+    ncol=2, widths=c(0.5, 0.52)
+)
+
+
+##ggdraw cleans up background
+cowplot::ggdraw(arrangeGrob(
+  row.1, row.2, row.3,
+  nrow=3,
+  heights=c(2.2/7.5, 2.8/7.5, 2.2/7.5)
+))
+grid.text(
+    LETTERS[1:7], 
+    x=c(0.06, 0.06, C=0.57, D=0.57, E=0.049, F=0.0725, G=0.51),
+    y=c(0.96, B=0.845, C=0.965, D=0.845, E=0.69, F=0.31, G=0.31),
+    ## match cowplot:plot_grid labels
+    gp=gp.label
+)
+@
+
+<<phylo-tree-w-skyplot, fig.cap='\\capPhylo', include=T, fig.height=7.0, out.width=outwidth[2], fig.width=figwidth[2]>>=
+.mar.top <- gg.plot.mar(l=0.0, b=0.5, r=4.5)
+plot_top <- plot_grid(
+    ha.gmrf + .mar.top, 
+    na.gmrf + .mar.top, 
+    ncol = 2,
+    #align = "h", axis = "none",
+    labels = c('A', 'B'),
+    label_size=lab.size,
+    label_x=-0.02,
+    label_y=1.1
+)
+## clade labels on R, alignment w/skyline on L
+.mar.bot <- gg.plot.mar(t=0.5, r=4.5, b=0, l=1.3)
+plot_bottom <- plot_grid(
+    #ha.phylo, na.phylo, 
+    ha.phylo+.mar.bot, na.phylo+.mar.bot, 
+    ncol = 2,
+    labels = c('C', 'D'),
+    label_size=lab.size,
+    label_x=-0.02,
+    label_y=1.05
+)
+
+title <- ( 
+    ggdraw() + 
+    draw_label("HA Segment",
+        fontface = 'bold',
+        x = 0.15, y = 0.5,
+        hjust = 0
+    ) + 
+    # add margin on the left of the drawing canvas,
+    # so title is aligned with left edge of first plot
+    draw_label("NA Segment",
+        fontface = 'bold',
+        x = 0.65, y = 0.5, 
+        hjust = 0
+    )
+    # add margin on the left of the drawing canvas
+    # so title is aligned with left edge of first plot
+)
+    
+plot(plot_grid(
+    title, plot_top, plot_bottom, 
+    ncol = 1, rel_heights = c(0.12, 1.1, 2.6)
+))
+@
+
+<<simulation_plots, fig.cap='\\capDynoSim', include=T, fig.height=4.5, out.width=outwidth[1], fig.width=figwidth[1]>>=
+## see plotting/dynamic_simulation.R
+#.mar <-  gg.plot.mar(0.5,0.5,0.5,1.3)
+phi_30 <- plot_grid(
+    p_wd_30 + gg.plot.mar(2,0.6,-0.2,1.3), 
+    p_cr_30 + gg.plot.mar(-0.2,0.6,0,1.3),
+    ## need extra space for x-axis label in plot B
+    rel_heights=c(1.12,1),
+    nrow = 2
+)
+plot(plot_grid(
+    phi_30,
+    c_grid_plot+ gg.plot.mar(0.3,0.2,0,1), 
+    ncol = 2, nrow = 1, 
+    label_size=lab.size,
+    labels = c("A", "B")
+))
+@
+
+
+<<susc_backlog, fig.cap='\\capVaRSuscBl', include=T, fig.height=4.5, out.width=outwidth[3], fig.width=figwidth[3]>>=
+## convenience function: squeeze margins based on panel position
+.gg.squeeze <- function(top=F, left=F, base=0.4, squeeze=1.2)
+    gg.plot.mar(
+        t=base, r=base-squeeze*left, b=base-squeeze*top, 
+        #l=base-
+        l=base-0.5*squeeze*(!left) 
+    )
+## see plotting/R0_scenes_susc_backlog.R
+## egg::ggarrange handles page layout here 
+grid_plt_1 <- ggarrange(
+    draw=F,
+    plt_1 + .gg.squeeze(top=T, left=T) + theme(legend.margin=margin(0.0, 0.2, -0.3, 0.2, unit='line')), 
+    plt_2 + .gg.squeeze(left=T), 
+    nrow = 2, 
+    labels = c("A", "C"), 
+    heights=c(1,0.4), widths=c(1,1),
+    label.args = list(gp = gp.label)
+)
+
+grid_plt_2 <- ggarrange(
+    draw=F,
+    plt_3 + .gg.squeeze(top=T)+ theme(legend.margin=margin(0.0, 0.2, 0.2, 0.2, unit='line')), 
+    plt_4 + .gg.squeeze(), 
+    nrow = 2, labels = c("B", "D"),
+    heights=c(1,0.4), widths=c(1,1),
+    label.args = list(gp = gp.label)
+)
+
+plot_grid(
+    grid_plt_1, grid_plt_2,
+    ncol=2
+)
+@
+
+
+
+\clearpage
+
+<<r si, child = 'supplemental.Rnw'>>=
+@
+
+\end{document}

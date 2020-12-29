@@ -1,0 +1,376 @@
+<< echo=FALSE, cache=FALSE>>=
+set_parent('figs.Rnw')
+@
+
+%% Input if needed (when called alone)
+\ifx\capLoad\undefined
+  \input{captions}
+\fi
+
+\setcounter{table}{0}
+\renewcommand{\thetable}{S\arabic{table}}
+\setcounter{figure}{0}
+\renewcommand{\thefigure}{S\arabic{figure}}                 \setcounter{page}{1}
+\renewcommand{\thepage}{S\arabic{page}}
+
+\maketitle
+
+
+<<setup-si, include=F, cache=F>>=
+source('plotting/knitr.defaults.R')
+@
+
+\section*{Supplemental Figures and Tables}
+
+\section{Influenza sample data}
+Here we display the raw weekly United States influenza sample data from CDC FluView \cite{CDC-FluView-Feb28}. Further data and U.S. influenza surveillance procedure information is available at \cite{CDC-influenza-overview}.  The total number of weekly tested samples varies, seasonally, by state, and across the time frame of available data (influenza seasons 2010/2011 through 2019/2020). State abbreviations are used to indicate the state represented in each row. States are organized from north (top) to south (bottom). Data from figures \ref{fig:samples_a} and \ref{fig:samples_b} were used to generate main text Figure \ref{fig:prop-b-w-total-samples}.
+
+% <<prop-b, fig.cap="Proportion of B (top) and total samples (bottom).", fig.height=11>>=
+<<samples, fig.cap="Total number of tested samples per week by state. Gray indicates weeks where no data was reported for either Type A or Type B. The magnititude of tested samples varies seasonally within each state. Several states display gaps in sample data for periods outside of the influenza season (gray weeks). We observe that these gaps in reporting have generally decreased since the 2015/2016 season, with a few notable exceptions: Alaska, Maine, New Hampshire, Wyoming, and Nevada.", fig.height=7>>=
+p.specimens
+#grid.arrange(p.prop.b,p.specimens,ncol=1)
+@
+
+<<samples_a, fig.cap="Positive Type A samples per week by state (per 100,000 residents). Gray indicates weeks lacking Type A data. Type A samples also vary seasonally within states. Peaks in Type A incidence are often shared across states (see bands of light blue in figure).", fig.height=6>>=
+.breaks <- c(0.01, 0.1,1,10)
+
+p.specimens+aes(fill=percap_a) + scale_fill_continuous(name='Type A\n(per 100,000)', trans='sqrt', guide=gg.colorbar) 
+#p.specimens+aes(fill=percap_a) + scale_fill_continuous(trans='sqrt', name='Type A\n(per 100,000)'), breaks=.breaks)
+@
+
+<<samples_b, fig.cap="Positive Type B samples per week by state (per 100,000 residents). Gray indicates weeks lacking Type B data. Type B samples also vary seasonally within states and display shared seasonality across states (see bands of light blue in figure). Reporting of Type B samples has increased in most states, with clear out of season gaps of data observed prior to the 2015/2016 season. ", fig.height=6>>=
+p.specimens+aes(fill=percap_b) + scale_fill_continuous(name='Type B\n(per 100,000)', trans='sqrt', guide=gg.colorbar) 
+#p.specimens+aes(fill=percap_b) + scale_fill_continuous(trans='sqrt', name='Type B\n(per 100,000)', breaks=.breaks)
+@
+\clearpage
+\section{Generalized additive model for seasonality}
+We first characterize differences in influenza seasonality between Types A and B by fitting type-specific generalized additive models (GAMs) to the weekly state-level raw data displayed in Figures \ref{fig:samples_a} and \ref{fig:samples_b}, including all weeks prior to the 2019 influenza season.  Each GAM was constructed using gaussian errors with a log link, state as a fixed effect, season as a random effect, and a cubic regression spline (by type) across week. GAM expected marginal means were then computed by week and type. Type A samples are expected to peak before Type B and also have a larger magnitude. 
+
+<<mod-season, fig.cap="Expected weekly positive samples per 100,000 residents by influenza type, with 95\\% CI. Values show expected marginal means averaged across state and season, and were computed from two GAMs of weekly samples (one per type). Models include state as a fixed effect and season as a random effect, and include all observations prior to the 2019 season. Note that week 1 here is equivalent to epidemiological week 40.", fig.height=2.5>>=
+p.mod.season + coord_cartesian(xlim=c(5,41))
+@
+
+\clearpage
+\section{Phase portraits}
+Here we display phase portraits of the trajectories of Type A versus Type B positive samples over time (by state, per 100,000 residents). Figure \ref{fig:totals-comparison} summarizes each influenza season for the entire U.S. (one line per state), where color indicates the week within each season. In Figure \ref{fig:totals-by-season}, we provide a detailed inspection of each season for select states (indicated by color), while Figure \ref{fig:totals-by-state} shows how seasons (indicated by color) vary within each state. Finally, Figure \ref{fig:totals-split} details each influenza season in each select state (with color indicating week, as in Figure \ref{fig:totals-comparison}).
+
+While considerable variation is evident between states, these phase portraits highlight key differences between seasons: in particular, the relative magnitude and timing of the peaks of Type A versus Type B. Moreover, the 2019 influenza season is a noteworthy departure from previous seasons, both for the country at large (Figure \ref{fig:totals-comparison}) and for individual states (Figure \ref{fig:totals-split}), with large peaks of both types (as in the 2017 season) and a relatively early peak of Type B.
+
+%\clearpage
+<<totals-comparison, fig.cap="Phase portrait showing the number of positive samples of Type A versus Type B (within each state, per 100,000 residents) for each influenza season over all states. Color indicates week of influenza season. In most seasons and states, Type A samples peak earlier and higher than Type B samples, though considerable variation is evident.">>=
+p.totals
+@
+
+<<totals-by-season, fig.cap="As in Figure \\ref{fig:totals-comparison} for select states (indicated by color).">>=
+p.totals.by.season
+@
+
+<<totals-by-state, fig.cap="Phase portrait (as in Figure \\ref{fig:totals-comparison}-\\ref{fig:totals-by-season}) detailing select states, with season indicated by color.">>=
+p.totals.by.state + gg.leg.outline + guides(color=guide_legend(override.aes=list(size=1.4)))#, alpha=1)))
+@
+
+<<totals-split, fig.cap="Detail of Figure \\ref{fig:totals-comparison} for select states.", fig.height=10>>=
+p.totals.split  +gg.panel.pack
+@
+
+\clearpage
+\section{Relative peaks}
+In main text Figure \ref{fig:aligned-peaks-totals-dist} panels A through D, we show relative differences in seasonality using Type A peak weeks as reference weeks. Here we show that results are consistent when using Type B peak weeks as reference weeks. 
+
+<<peak-si, fig.cap="\\capPeakSi", fig.height=4>>=
+p.peak.si <- arrangeGrob(
+    arrangeGrob(
+        p.peaks.from.b + 
+        gg.leg.pos(c(0.005, 0.44)) + theme(legend.justification=c(0,1)),
+        top='2010-2018 Seasons'
+    ),
+    arrangeGrob(
+        p.peaks.from.b %+% subset(peak.quant$last, peak.type=='percap_b') + gg.leg.none,
+        top='2019 Season'
+    ),
+    ncol=2,
+    #layout_matrix=rbind(c(1,1), c(2,3)),
+    ## just enough space in top row for legend
+    #heights=c(0.07, 0.93),
+    left="Positive samples per 100,000"
+)
+grid.draw(p.peak.si)
+grid.text(
+    label=c('A','B','C','D'), 
+    x=c(rep(0.055,2), rep(0.53, 2)),
+    y=rep(c(0.9, 0.475), 2),
+    gp=gp.label
+)
+@
+
+\clearpage
+\section{Influenza Type B data}
+ Distribution of Type B samples for seasons 2010/2011 to 2019/2020 \cite{CDC-FluView-age,CDC-Wonder-pop-proj}. We observe that Type B samples per 100,000 individuals vary across age-groups. However, the distribution of lineages within each season is remarkably consistent across age-groups. Available lineage-specific data suggest that the atypical dynamics we observe in the 2019/2020 season are not the result of a cohort effect.    
+
+<<per-capita-B, fig.cap="Positive influenza B samples per 100,000 individuals. Grouped by age-group and colored by lineage. Note that the first season with linage-specific data is the 2015/2016 season.", fig.height=9>>=
+plot(p.per.capitaB)
+@
+
+
+% <<p-agg-prop, fig.cap="Proportion of positive samples for each subtype by age-group, aggregated over seasons.">>=
+% grid.arrange(p.agg.current.prop,p.agg.full.prop,ncol=3,widths=c(2,2,0.75),legend=mylegend)
+% @
+% 
+% <<p-agg-per100k, fig.cap="Number of samples for each subtype per 100,000 individuals. Separated by age-groups and aggregated over seasons.">>=
+% grid.arrange(p.agg.current,p.agg.full,ncol=3,widths=c(2,2,0.75),legend=mylegend)
+% @
+
+\clearpage
+\section{Regression models}
+We begin with an overview of positive samples over time in Figure \ref{fig:totals-dist-season}, which shows the observed difference between positive samples of Type A vs Type B (points), along with a generalized additive model (GAM) prediction in blue (using state as a fixed effect).
+
+Next we construct a GAM to predict the probability that positive samples are of Type B.  In this model, state is again a fixed effect, while smoothing terms include week of influenza season (fixed effect) and influenza season (random effect). Out-of-sample predictions were made for each influenza season, and are compared to observed proportions of Type B samples in Figure \ref{fig:obs-v-predicted}. Finally, Figure \ref{fig:residual-density} shows the distribution of these residuals by influenza season (color) for the full season (lacking the 2019 season), and for the early weeks of each season (including the 2019 season, through season week 18). Model performance varies considerably between years, and is relatively poor in seasons 2010, 2012, and 2015. However, predictions for the 2019 season are much worse, indicating a substantial shift in the pattern of Type B samples relative to previous seasons. 
+
+Inter-seasonal variation in model performance as determined by the magnitude of residuals is summarized in Figure \ref{fig:aligned-peaks-totals-dist}G. With the exception of seasons 2015 and 2019, the median difference between predicted and observed proportions is less than 0.1. The interquartile range (IQR) of residuals contains zero in all years except 2013 and 2019, with considerably lower variance observed in 2013.
+
+<<totals-dist-season, fig.cap="Observed difference between positive samples of Type A vs Type B (points) with GAM predictions (blue line) with 95\\% CI. Some extreme observations are omitted for clarity.">>=
+p.totals.dist.season 
+@
+
+\clearpage
+
+<<obs-v-predicted, fig.cap="Observed proportion of Type B samples (out of all positive samples) versus (out-of-sample) model predictions, by season. Each point represents a state-week pair. Note that only of the beginning of the 2019 season is shown.", fig.height=3>>=
+p.obs.v.predicted
+@
+
+%% facet_grid??
+<<residual-density, fig.cap=sprintf("Density of model residuals (differences between observed data and corresponding model predictions) for the proportion of all positive samples per week of Type B, colored by season. Top: all weeks. Bottom: early weeks. For each season, a GAM was fit using all data \\textit{except} for that season's observations, and then (out-of-sample) predictions were made for that season. For the full model (seasons 2010-2019), deviance explained $=$ %2.1f\\%%.", summary(mod.all)$dev.expl*100), fig.height=6>>=
+plot_grid(
+    p.pred.diff+gg.leg.none,
+    p.pred.diff.early,
+    ncol=1, 
+    labels=c('Full season', 'Early weeks'),
+    label_y=0.95
+    
+)
+@
+
+\clearpage
+
+%<<pred, fig.cap="Density of residuals (observed - predicted): proportion of weekly positive samples of Type B. For each season, a GLMM was fit excluding that season's observations. An out-of-sample prediction was then made for the season.", fig.height=3.5, include=F>>=
+%p.pred.diff.wrap
+%@
+
+
+%% Combine with above?
+%<<pred-diff-stats, fig.cap=sprintf("Summary statistics of GAM residuals from out-of-sample prediction by season.  For the full model (seasons 2010 through 2019), deviance explained $=$ %2.1f\\%%.", summary(mod.all)$dev.expl*100), fig.height=2.25, include=F>>=
+%p.pred.diff.stats
+%@
+
+% <<obs-v-predicted-prop, fig.cap="Predicted probabilities of observing a Type B sample when a sample is positive versus the observed proportion of Type B positive samples. Seasons are separated into panels. Predictions for each season are based on models fit to a subset of the data that does not the corresponding season. Each point represents a state-week pair. Note that not all weeks are avilable for the 2019/2020 season.">>=
+% grid.arrange(p.obs.v.predicted,p.obs.v.predicted.prop)
+% @
+
+
+
+%############################################
+% Arash phase analysis
+%############################################
+
+%\section*{Time series analysis}
+\section{Epidemic phase lag analysis}
+Figure \ref{fig:phase_lag} depicts the different pre-processing and calculation steps to obtain epidemic phase lags between influenza Type A and B for the state of Minnesota. The raw time series are first standardized and normalized by subtracting the mean and dividing by the standard deviation. We then applied a band-pass filter to extract the time series around the dominant period. Finally, we applied Hilbert transform to derive the analytical signal from each filtered time series and used it to find the phase angle. Instantaneous phase lag between the two time series was obtained by subtracting their unwrapped phase angles. Instantaneous phase lag between the two time series was measured at the first week of February of each year (during the expected timing of peak influenza season).
+
+\begin{figure}[h!]
+\includegraphics[width=\maxwidth]{extra/figure-si/Fig1_phase_lag_steps} \caption{\capPhaseLag}\label{fig:phase_lag}
+\end{figure}
+
+\clearpage
+\section{Continuous wavelet analysis}
+We applied continuous wavelet transform on normalized per capita time series of positive samples of Type A and B for each state to determine the dominant period. We used Morlet wavelet with a non-dimensional frequency of $\omega_0 = 6$. Time series were zero-padded up to the next power of 2 to mitigate the edge effects. Figures \ref{fig:CwtA} and \ref{fig:CwtB} present the results for Type A and B respectively. For illustrative purposes, local power spectra for the state of Alabama is shown panel in A in each figure. Panels B and C depict the local and global power spectra for each state; red dashed lines indicate the dominant period in each state. White and gray dashed lines indicate a 1-year period.
+
+
+\begin{figure}[h!]
+\includegraphics[width=\maxwidth]{extra/figure-si/Fig2_Type_A_CWT_per_Capita} \caption{\capCwtA}\label{fig:CwtA}
+\end{figure}
+
+\begin{figure}[h!]
+\includegraphics[width=\maxwidth]{extra/figure-si/Fig3_Type_B_CWT_per_Capita} \caption{\capCwtB}\label{fig:CwtB}
+\end{figure}
+
+\clearpage
+\section{Autoencoder anomaly detection analysis}
+We employed a deep autoencoder (AE) neural network for unsupervised detection of potential anomalies. The AE is constituted of an LSTM encoder which maps a time series of length L into a vector of length m (m < L), which is then passed to a decoder LSTM to reconstruct the time series $\hat{L}$. The AE is trained on the times series of weekly influenza B samples over the total number of positive samples for each state. Figure \ref{fig:ts_recon} depicts the original time series vs the time series recosntructed by AE for the state of Minesota. In figure \ref{fig:ts_anom} we have illustrated how the reconstruction error between the original and reconstructed time series is used to identify the anomalies for a given anomaly threshold. Figure \ref{fig:ts_thresh} illustrates the number of states going above the anomaly threshold for various threshold values. 
+
+\begin{figure}[h!]
+\includegraphics[width=\maxwidth]{extra/figure-si/Fig4_Minnesota_recons_time_series} \caption{\capTsRecon}\label{fig:ts_recon}
+\end{figure}
+
+
+\begin{figure}[h!]
+\includegraphics[width=\maxwidth]{extra/figure-si/Fig5_Minnesota_anomalous_segments} \caption{\capTsAnom}\label{fig:ts_anom}
+\end{figure}
+
+\begin{figure}[h!]
+\includegraphics[width=\maxwidth]{extra/figure-si/Fig6_n_state_above_thresholds} \caption{\capTsThresh}\label{fig:ts_thresh}
+\end{figure}
+
+\clearpage
+
+%############################################
+% Simulation models
+%############################################
+\section{Strategic simulation models}
+Here we provide details of the strategic simulation model used to explore potential effects of changes in reproduction number and cross-protection between influenza Types A and B (see Figure \ref{fig:simulation_plots}). Figure \ref{fig:model_diagram} illustrates the model structure including flows between compartments. A description of corresponding state variables is provided in Table \ref{tab:sirs_model_compartments}. Definitions for other strategic model parameters are provided in Methods Table \ref{tab:sirs_model_symbols}. Figure \ref{fig:simulation_plots_supp} displays analogous results to those in Figure \ref{fig:simulation_plots}, but with different type-specific durations of immunity (4 and 10 years for Types A and B respectively). Again, we observe no difference between scenarios c and b and note that the horizontal axis (ratio of type-specific reproduction numbers) appears to play a larger role in determining dynamics than the vertical axis (cross-protection parameters).  
+
+\begin{figure}[h!]
+\includegraphics[width=0.8\maxwidth]{extra/figure-si/model_diagram}
+\caption{Two-type influenza transmission model schematic. State variables are defined in Table \ref{tab:sirs_model_compartments}. See Table \ref{tab:sirs_model_symbols} for description of rate parameters and Methods for a detailed specification of the type-specific and time-varying forces of infection ($\lambda_A$ and $\lambda_B$).}\label{fig:model_diagram}
+\end{figure}
+
+
+\begin{table}[h!]
+   \caption{Model State Variables}
+   \centering
+   \begin{tabular}{l|l}
+       Compartment & Definition \\
+   \midrule
+       $S$ & Susceptible individuals with no prior immunity \\
+       $I_A$ & Infectious with Type A; no prior immunity \\
+       $I_B$ & Infectious with Type B; no prior immunity \\
+       $C_A$ & Recovered from A; cross-protected against B \\
+       $C_B$ & Recovered from B; cross-protected against A \\
+       $R_A$ & Recovered from A; no cross-protection \\
+       $R_B$ & Recovered from B; no cross-protection \\
+       $I_{BA}$ & Infectious with B; prior immunity to A \\
+       $I_{AB}$ & Infectious with A; prior immunity to B \\
+       $R$ & Recovered from A and B \\
+       $K_{A}$ & Cumulative cases of Type A \\
+       $K_{B}$ & Cumulative cases of Type B \\
+   \bottomrule
+   \end{tabular}
+   \label{tab:sirs_model_compartments}
+\end{table}
+
+
+
+<<simulation_plots_supp, fig.cap='\\capDynoSimSupp', include=T, fig.height=4.5, out.width=outwidth[2], fig.width=figwidth[2]>>=
+.mar <-  gg.plot.mar(0.5,0.5,0.5,1.3)
+phi_30_2 <- plot_grid(
+    p_wd_30_2 + .mar, p_cr_30_2 + .mar,
+    ## need extra space for x-axis label in plot B
+    rel_heights=c(1,1.05),
+    nrow = 2
+)
+plot(plot_grid(
+    phi_30_2,
+    c_grid_plot_2+ gg.plot.mar(0.3,1,0,1), 
+    ncol = 2, nrow = 1, 
+    label_size=lab.size,
+    labels = c("A", "B")
+))
+@
+
+\clearpage
+%############################################
+% Model fitting
+%############################################
+\section{Model fitting}
+
+Parameter estimates from the 2016-2018 seasons presented in Table \ref{tab:model_fit} and Table \ref{tab:model_fits_2016_2018} were used to initialize and simulate epidemic dynamics for 100 years, ensuring that the system relaxed to the endemic equilibrium. At end of these simulation runs, values of type susceptible and infectious classes were collected. These values with conjunction of type-specific $R_0$ values estimated from the 2019 season, Table \ref{tab:model_fit} and Table \ref{tab:model_fits_2019}, yield the infectious growth rate reported in the main manuscript, Equation 1.
+
+% latex table generated in R 3.6.1 by xtable 1.8-4 package
+% Fri Jul 10 17:10:14 2020
+\begin{table}[htbp]
+\centering
+\makebox[\textwidth][c]{
+\begin{tabular}{ccc}
+\toprule
+ & \multicolumn{2}{c}{2016-2018} \\
+Estd. Parameters & Cross-protection & Neutral \\ 
+ \cmidrule(lr){1-3}
+$R_0^A$ & 2.539 (2.536,2.559) & 2.591 (2.585,2.601)  \\ 
+ $R_0^B$ & 2.305 (2.301, 2.327) & 1.562(1.559, 1.578)  \\ 
+  $\chi_{AB}$ & 0.00605 (0.00604, 0.00743)    \\ 
+  $\chi_{BA}$ & 0.953 (0.951, 0.955)&    \\ 
+  $b_1^A$ & 0.28 (0.27, 0.29) & 0.4419 (0.4404, 0.4427)   \\ 
+  $b_1^B$ & 0.2712 (0.2707, 0.2732) & 0.376 (0.374,0.377)   \\ 
+  $\rho_A$ & 0.00377 (0.00377, 0.00379) & 0.00620 (0.00618, 0.00622)   \\ 
+  $\rho_B$ & 0.0014 (0.0013, 0.0014) & 0.0023 (0.0023, 0.0024)  \\ 
+  $t_0^A$ & 0.155 (0.154,0.156)& 0.132 (0.131, 0.133)  \\ 
+  $t_0^B$ & 0.184 (0.183,0.185) & 0.152 (01.151, 0.154)   \\ 
+  \cmidrule(lr){1-3}
+  logLik & -3669.89 & -3626.61  \\ 
+  AIC & 7359.78 & 7269.21  \\ 
+  $\Delta$AIC &  90.56 &  0   \\ 
+   \bottomrule
+\end{tabular}
+}
+\caption{Parameter estimates and goodness of fit (2016/2017-2018/2019 seasons). Cross-protection and neutral models were formally contested to assess relative goodness of fit using $\Delta$AIC values. Models were integrated until equilibrium (burn-in period of 100 years) and subsequent 3 years were used in the fitting procedure. Simulated trajectories were fit to weekly, type-specific, incidence data for influenza for the state of Massachusetts.}
+\label{tab:model_fits_2016_2018}
+\end{table}
+
+<<fit-traj, fig.cap = "Relative fits between epidemiological models for seasons 2016-2018. Plots show matched type specific simulated trajectories - neutral (dashed) and cross-protection (dotted) models fitted to weekly case report data (solid) for MA.  Ribbons represent Poisson observation error around model predictions.", fig.height=5>>=
+# this gets generated after running the pmla_plts_2.R
+traj_data_comp_plt_opt2
+@
+
+\clearpage
+% latex table generated in R 3.5.2 by xtable 1.8-3 package
+% Mon Jul 20 09:31:47 2020
+\begin{table}[htbp]
+\centering
+\makebox[\textwidth][c]{
+\begin{tabular}{ccc}
+\toprule
+& \multicolumn{2}{c}{2019} \\
+Estd. Parameters & Flu A & Flu B \\
+\cmidrule(lr){1-3}
+$R_0$ & 3.074 (3.062, 3.083)   & 2.4093 (2.397, 2.419)  \\ 
+$b_1$ & 0.308 (0.306,0.309)   & 0.293 (0.292, 0.294) \\ 
+$\rho$ & 0.0032 (0.0031,0.0033)  & 0.00192 (0.00191,0.00199) \\ 
+\cmidrule(lr){1-3}
+logLik & -408.5 & -223.04 \\ 
+\bottomrule
+\end{tabular}
+}
+\caption{Parameter estimates and goodness of fit (2019 season). The best fitting model (neutral) from the 2016-2018 era, Table \ref{tab:model_fits_2016_2018}, was used to estimate type-specific epidemiological parameters. The model was integrated to reach equilibrium (burn-in period of 103 years) using parameter MLEs from the previous era. Eventual sizes of model compartments from this simulation were fixed as initial conditions for 2019 season. Model parameters not estimated above were fixed at the MLE from the previous era. Simulated trajectories were fit to weekly, type-specific, influenza case data for the state of Massachusetts.}
+\label{tab:model_fits_2019}
+\end{table}
+
+
+<<fit-traj_2019, fig.cap = "Model fit for 2019 Influenza season. Plots show matched type-specific simulated trajectories for the neutral model (dashed) fitted to weekly case report data (solid) for MA.  Ribbons represent Poisson observation error around model predictions.", fig.height=5>>=
+# this gets generated after running the pmla_plts_2.R
+fit_plt_2019
+@
+
+\clearpage
+% latex table generated in R 3.6.1 by xtable 1.8-4 package
+% Fri Jul 10 17:10:14 2020
+\begin{table}[htbp]
+\centering
+\makebox[\textwidth][c]{
+\begin{tabular}{cc}
+\toprule
+ & \multicolumn{1}{c}{2016-2019} \\
+Estd. Parameters & Neutral \\ 
+ \cmidrule(lr){1-2}
+$R_0^A$ & 4.104   \\ 
+ $R_0^B$  & 2.871  \\ 
+  $\chi_{AB}$ &     \\ 
+  $\chi_{BA}$ &     \\ 
+  $b_1^A$  & 0.281  \\ 
+  $b_1^B$  & 0.160    \\ 
+  $\rho_A$ & 0.00334   \\ 
+  $\rho_B$ & 0.00124  \\ 
+  $t_0^A$ & 0.269   \\ 
+  $t_0^B$ & 0.225    \\ 
+  \cmidrule(lr){1-2}
+  logLik & -4535.358  \\ 
+  AIC & 9086.720  \\ 
+  $\Delta$AIC &  530.436    \\ 
+   \bottomrule
+\end{tabular}
+}
+\caption{Parameter estimates and goodness of fit. The neutral model was fit to seasons 2016/2017-2019/2020 to assess relative goodness of fit against the best fitting model (neutral with season dependent parameter values, Tables \ref{tab:model_fits_2016_2018} and \ref{tab:model_fits_2019}) using $\Delta$AIC. Simulated trajectories were fit to weekly, type-specific, incidence data for influenza for the state of Massachusetts.}
+\label{tab:model_fits_2016_2019}
+\end{table}
+
+% Bibliography
+\bibliographystyle{unsrt}
+\bibliography{supplement}

@@ -1,0 +1,634 @@
+"Notes"	"State"	"State Code"	"Year"	"Year Code"	"Month"	"Month Code"	Births
+	"Alabama"	"01"	"2017"	"2017"	"January"	"1"	4937
+	"Alabama"	"01"	"2017"	"2017"	"February"	"2"	4497
+	"Alabama"	"01"	"2017"	"2017"	"March"	"3"	4809
+	"Alabama"	"01"	"2017"	"2017"	"April"	"4"	4383
+	"Alabama"	"01"	"2017"	"2017"	"May"	"5"	4763
+	"Alabama"	"01"	"2017"	"2017"	"June"	"6"	4823
+	"Alabama"	"01"	"2017"	"2017"	"July"	"7"	5053
+	"Alabama"	"01"	"2017"	"2017"	"August"	"8"	5539
+	"Alabama"	"01"	"2017"	"2017"	"September"	"9"	5211
+	"Alabama"	"01"	"2017"	"2017"	"October"	"10"	5061
+	"Alabama"	"01"	"2017"	"2017"	"November"	"11"	4969
+	"Alabama"	"01"	"2017"	"2017"	"December"	"12"	4896
+	"Alaska"	"02"	"2017"	"2017"	"January"	"1"	796
+	"Alaska"	"02"	"2017"	"2017"	"February"	"2"	783
+	"Alaska"	"02"	"2017"	"2017"	"March"	"3"	906
+	"Alaska"	"02"	"2017"	"2017"	"April"	"4"	867
+	"Alaska"	"02"	"2017"	"2017"	"May"	"5"	895
+	"Alaska"	"02"	"2017"	"2017"	"June"	"6"	896
+	"Alaska"	"02"	"2017"	"2017"	"July"	"7"	911
+	"Alaska"	"02"	"2017"	"2017"	"August"	"8"	929
+	"Alaska"	"02"	"2017"	"2017"	"September"	"9"	934
+	"Alaska"	"02"	"2017"	"2017"	"October"	"10"	864
+	"Alaska"	"02"	"2017"	"2017"	"November"	"11"	806
+	"Alaska"	"02"	"2017"	"2017"	"December"	"12"	858
+	"Arizona"	"04"	"2017"	"2017"	"January"	"1"	6958
+	"Arizona"	"04"	"2017"	"2017"	"February"	"2"	6168
+	"Arizona"	"04"	"2017"	"2017"	"March"	"3"	6797
+	"Arizona"	"04"	"2017"	"2017"	"April"	"4"	6308
+	"Arizona"	"04"	"2017"	"2017"	"May"	"5"	6523
+	"Arizona"	"04"	"2017"	"2017"	"June"	"6"	6625
+	"Arizona"	"04"	"2017"	"2017"	"July"	"7"	6980
+	"Arizona"	"04"	"2017"	"2017"	"August"	"8"	7425
+	"Arizona"	"04"	"2017"	"2017"	"September"	"9"	7219
+	"Arizona"	"04"	"2017"	"2017"	"October"	"10"	7319
+	"Arizona"	"04"	"2017"	"2017"	"November"	"11"	6798
+	"Arizona"	"04"	"2017"	"2017"	"December"	"12"	6752
+	"Arkansas"	"05"	"2017"	"2017"	"January"	"1"	3158
+	"Arkansas"	"05"	"2017"	"2017"	"February"	"2"	2792
+	"Arkansas"	"05"	"2017"	"2017"	"March"	"3"	3053
+	"Arkansas"	"05"	"2017"	"2017"	"April"	"4"	2783
+	"Arkansas"	"05"	"2017"	"2017"	"May"	"5"	3027
+	"Arkansas"	"05"	"2017"	"2017"	"June"	"6"	3087
+	"Arkansas"	"05"	"2017"	"2017"	"July"	"7"	3323
+	"Arkansas"	"05"	"2017"	"2017"	"August"	"8"	3614
+	"Arkansas"	"05"	"2017"	"2017"	"September"	"9"	3285
+	"Arkansas"	"05"	"2017"	"2017"	"October"	"10"	3124
+	"Arkansas"	"05"	"2017"	"2017"	"November"	"11"	3170
+	"Arkansas"	"05"	"2017"	"2017"	"December"	"12"	3104
+	"California"	"06"	"2017"	"2017"	"January"	"1"	39362
+	"California"	"06"	"2017"	"2017"	"February"	"2"	36002
+	"California"	"06"	"2017"	"2017"	"March"	"3"	39133
+	"California"	"06"	"2017"	"2017"	"April"	"4"	36974
+	"California"	"06"	"2017"	"2017"	"May"	"5"	39400
+	"California"	"06"	"2017"	"2017"	"June"	"6"	38955
+	"California"	"06"	"2017"	"2017"	"July"	"7"	40475
+	"California"	"06"	"2017"	"2017"	"August"	"8"	42231
+	"California"	"06"	"2017"	"2017"	"September"	"9"	41475
+	"California"	"06"	"2017"	"2017"	"October"	"10"	40410
+	"California"	"06"	"2017"	"2017"	"November"	"11"	38814
+	"California"	"06"	"2017"	"2017"	"December"	"12"	38427
+	"Colorado"	"08"	"2017"	"2017"	"January"	"1"	4990
+	"Colorado"	"08"	"2017"	"2017"	"February"	"2"	4623
+	"Colorado"	"08"	"2017"	"2017"	"March"	"3"	5464
+	"Colorado"	"08"	"2017"	"2017"	"April"	"4"	5159
+	"Colorado"	"08"	"2017"	"2017"	"May"	"5"	5526
+	"Colorado"	"08"	"2017"	"2017"	"June"	"6"	5705
+	"Colorado"	"08"	"2017"	"2017"	"July"	"7"	5596
+	"Colorado"	"08"	"2017"	"2017"	"August"	"8"	5812
+	"Colorado"	"08"	"2017"	"2017"	"September"	"9"	5609
+	"Colorado"	"08"	"2017"	"2017"	"October"	"10"	5506
+	"Colorado"	"08"	"2017"	"2017"	"November"	"11"	5099
+	"Colorado"	"08"	"2017"	"2017"	"December"	"12"	5293
+	"Connecticut"	"09"	"2017"	"2017"	"January"	"1"	2782
+	"Connecticut"	"09"	"2017"	"2017"	"February"	"2"	2568
+	"Connecticut"	"09"	"2017"	"2017"	"March"	"3"	2982
+	"Connecticut"	"09"	"2017"	"2017"	"April"	"4"	2902
+	"Connecticut"	"09"	"2017"	"2017"	"May"	"5"	3043
+	"Connecticut"	"09"	"2017"	"2017"	"June"	"6"	3013
+	"Connecticut"	"09"	"2017"	"2017"	"July"	"7"	3038
+	"Connecticut"	"09"	"2017"	"2017"	"August"	"8"	3197
+	"Connecticut"	"09"	"2017"	"2017"	"September"	"9"	3139
+	"Connecticut"	"09"	"2017"	"2017"	"October"	"10"	2952
+	"Connecticut"	"09"	"2017"	"2017"	"November"	"11"	2897
+	"Connecticut"	"09"	"2017"	"2017"	"December"	"12"	2708
+	"Delaware"	"10"	"2017"	"2017"	"January"	"1"	877
+	"Delaware"	"10"	"2017"	"2017"	"February"	"2"	807
+	"Delaware"	"10"	"2017"	"2017"	"March"	"3"	921
+	"Delaware"	"10"	"2017"	"2017"	"April"	"4"	853
+	"Delaware"	"10"	"2017"	"2017"	"May"	"5"	936
+	"Delaware"	"10"	"2017"	"2017"	"June"	"6"	958
+	"Delaware"	"10"	"2017"	"2017"	"July"	"7"	942
+	"Delaware"	"10"	"2017"	"2017"	"August"	"8"	948
+	"Delaware"	"10"	"2017"	"2017"	"September"	"9"	928
+	"Delaware"	"10"	"2017"	"2017"	"October"	"10"	974
+	"Delaware"	"10"	"2017"	"2017"	"November"	"11"	836
+	"Delaware"	"10"	"2017"	"2017"	"December"	"12"	875
+	"District of Columbia"	"11"	"2017"	"2017"	"January"	"1"	775
+	"District of Columbia"	"11"	"2017"	"2017"	"February"	"2"	717
+	"District of Columbia"	"11"	"2017"	"2017"	"March"	"3"	780
+	"District of Columbia"	"11"	"2017"	"2017"	"April"	"4"	743
+	"District of Columbia"	"11"	"2017"	"2017"	"May"	"5"	802
+	"District of Columbia"	"11"	"2017"	"2017"	"June"	"6"	844
+	"District of Columbia"	"11"	"2017"	"2017"	"July"	"7"	897
+	"District of Columbia"	"11"	"2017"	"2017"	"August"	"8"	850
+	"District of Columbia"	"11"	"2017"	"2017"	"September"	"9"	811
+	"District of Columbia"	"11"	"2017"	"2017"	"October"	"10"	801
+	"District of Columbia"	"11"	"2017"	"2017"	"November"	"11"	773
+	"District of Columbia"	"11"	"2017"	"2017"	"December"	"12"	767
+	"Florida"	"12"	"2017"	"2017"	"January"	"1"	18571
+	"Florida"	"12"	"2017"	"2017"	"February"	"2"	17022
+	"Florida"	"12"	"2017"	"2017"	"March"	"3"	18303
+	"Florida"	"12"	"2017"	"2017"	"April"	"4"	16832
+	"Florida"	"12"	"2017"	"2017"	"May"	"5"	17717
+	"Florida"	"12"	"2017"	"2017"	"June"	"6"	17952
+	"Florida"	"12"	"2017"	"2017"	"July"	"7"	19019
+	"Florida"	"12"	"2017"	"2017"	"August"	"8"	20433
+	"Florida"	"12"	"2017"	"2017"	"September"	"9"	19454
+	"Florida"	"12"	"2017"	"2017"	"October"	"10"	19611
+	"Florida"	"12"	"2017"	"2017"	"November"	"11"	19106
+	"Florida"	"12"	"2017"	"2017"	"December"	"12"	19610
+	"Georgia"	"13"	"2017"	"2017"	"January"	"1"	10757
+	"Georgia"	"13"	"2017"	"2017"	"February"	"2"	9894
+	"Georgia"	"13"	"2017"	"2017"	"March"	"3"	10675
+	"Georgia"	"13"	"2017"	"2017"	"April"	"4"	9707
+	"Georgia"	"13"	"2017"	"2017"	"May"	"5"	10663
+	"Georgia"	"13"	"2017"	"2017"	"June"	"6"	10645
+	"Georgia"	"13"	"2017"	"2017"	"July"	"7"	11178
+	"Georgia"	"13"	"2017"	"2017"	"August"	"8"	12135
+	"Georgia"	"13"	"2017"	"2017"	"September"	"9"	11299
+	"Georgia"	"13"	"2017"	"2017"	"October"	"10"	10778
+	"Georgia"	"13"	"2017"	"2017"	"November"	"11"	10703
+	"Georgia"	"13"	"2017"	"2017"	"December"	"12"	10809
+	"Hawaii"	"15"	"2017"	"2017"	"January"	"1"	1522
+	"Hawaii"	"15"	"2017"	"2017"	"February"	"2"	1368
+	"Hawaii"	"15"	"2017"	"2017"	"March"	"3"	1509
+	"Hawaii"	"15"	"2017"	"2017"	"April"	"4"	1418
+	"Hawaii"	"15"	"2017"	"2017"	"May"	"5"	1434
+	"Hawaii"	"15"	"2017"	"2017"	"June"	"6"	1358
+	"Hawaii"	"15"	"2017"	"2017"	"July"	"7"	1519
+	"Hawaii"	"15"	"2017"	"2017"	"August"	"8"	1486
+	"Hawaii"	"15"	"2017"	"2017"	"September"	"9"	1508
+	"Hawaii"	"15"	"2017"	"2017"	"October"	"10"	1524
+	"Hawaii"	"15"	"2017"	"2017"	"November"	"11"	1419
+	"Hawaii"	"15"	"2017"	"2017"	"December"	"12"	1452
+	"Idaho"	"16"	"2017"	"2017"	"January"	"1"	1774
+	"Idaho"	"16"	"2017"	"2017"	"February"	"2"	1692
+	"Idaho"	"16"	"2017"	"2017"	"March"	"3"	1928
+	"Idaho"	"16"	"2017"	"2017"	"April"	"4"	1751
+	"Idaho"	"16"	"2017"	"2017"	"May"	"5"	1963
+	"Idaho"	"16"	"2017"	"2017"	"June"	"6"	1976
+	"Idaho"	"16"	"2017"	"2017"	"July"	"7"	1946
+	"Idaho"	"16"	"2017"	"2017"	"August"	"8"	1977
+	"Idaho"	"16"	"2017"	"2017"	"September"	"9"	1886
+	"Idaho"	"16"	"2017"	"2017"	"October"	"10"	1902
+	"Idaho"	"16"	"2017"	"2017"	"November"	"11"	1639
+	"Idaho"	"16"	"2017"	"2017"	"December"	"12"	1747
+	"Illinois"	"17"	"2017"	"2017"	"January"	"1"	12009
+	"Illinois"	"17"	"2017"	"2017"	"February"	"2"	11190
+	"Illinois"	"17"	"2017"	"2017"	"March"	"3"	12359
+	"Illinois"	"17"	"2017"	"2017"	"April"	"4"	11878
+	"Illinois"	"17"	"2017"	"2017"	"May"	"5"	12854
+	"Illinois"	"17"	"2017"	"2017"	"June"	"6"	12677
+	"Illinois"	"17"	"2017"	"2017"	"July"	"7"	13171
+	"Illinois"	"17"	"2017"	"2017"	"August"	"8"	13663
+	"Illinois"	"17"	"2017"	"2017"	"September"	"9"	12851
+	"Illinois"	"17"	"2017"	"2017"	"October"	"10"	12747
+	"Illinois"	"17"	"2017"	"2017"	"November"	"11"	12015
+	"Illinois"	"17"	"2017"	"2017"	"December"	"12"	11976
+	"Indiana"	"18"	"2017"	"2017"	"January"	"1"	6605
+	"Indiana"	"18"	"2017"	"2017"	"February"	"2"	6099
+	"Indiana"	"18"	"2017"	"2017"	"March"	"3"	6902
+	"Indiana"	"18"	"2017"	"2017"	"April"	"4"	6471
+	"Indiana"	"18"	"2017"	"2017"	"May"	"5"	6684
+	"Indiana"	"18"	"2017"	"2017"	"June"	"6"	6864
+	"Indiana"	"18"	"2017"	"2017"	"July"	"7"	7305
+	"Indiana"	"18"	"2017"	"2017"	"August"	"8"	7494
+	"Indiana"	"18"	"2017"	"2017"	"September"	"9"	7264
+	"Indiana"	"18"	"2017"	"2017"	"October"	"10"	7003
+	"Indiana"	"18"	"2017"	"2017"	"November"	"11"	6797
+	"Indiana"	"18"	"2017"	"2017"	"December"	"12"	6682
+	"Iowa"	"19"	"2017"	"2017"	"January"	"1"	3055
+	"Iowa"	"19"	"2017"	"2017"	"February"	"2"	2909
+	"Iowa"	"19"	"2017"	"2017"	"March"	"3"	3237
+	"Iowa"	"19"	"2017"	"2017"	"April"	"4"	3058
+	"Iowa"	"19"	"2017"	"2017"	"May"	"5"	3270
+	"Iowa"	"19"	"2017"	"2017"	"June"	"6"	3239
+	"Iowa"	"19"	"2017"	"2017"	"July"	"7"	3391
+	"Iowa"	"19"	"2017"	"2017"	"August"	"8"	3593
+	"Iowa"	"19"	"2017"	"2017"	"September"	"9"	3342
+	"Iowa"	"19"	"2017"	"2017"	"October"	"10"	3142
+	"Iowa"	"19"	"2017"	"2017"	"November"	"11"	3082
+	"Iowa"	"19"	"2017"	"2017"	"December"	"12"	3112
+	"Kansas"	"20"	"2017"	"2017"	"January"	"1"	2944
+	"Kansas"	"20"	"2017"	"2017"	"February"	"2"	2664
+	"Kansas"	"20"	"2017"	"2017"	"March"	"3"	3103
+	"Kansas"	"20"	"2017"	"2017"	"April"	"4"	2850
+	"Kansas"	"20"	"2017"	"2017"	"May"	"5"	3134
+	"Kansas"	"20"	"2017"	"2017"	"June"	"6"	3074
+	"Kansas"	"20"	"2017"	"2017"	"July"	"7"	3200
+	"Kansas"	"20"	"2017"	"2017"	"August"	"8"	3463
+	"Kansas"	"20"	"2017"	"2017"	"September"	"9"	3155
+	"Kansas"	"20"	"2017"	"2017"	"October"	"10"	3060
+	"Kansas"	"20"	"2017"	"2017"	"November"	"11"	2950
+	"Kansas"	"20"	"2017"	"2017"	"December"	"12"	2922
+	"Kentucky"	"21"	"2017"	"2017"	"January"	"1"	4317
+	"Kentucky"	"21"	"2017"	"2017"	"February"	"2"	4039
+	"Kentucky"	"21"	"2017"	"2017"	"March"	"3"	4550
+	"Kentucky"	"21"	"2017"	"2017"	"April"	"4"	4200
+	"Kentucky"	"21"	"2017"	"2017"	"May"	"5"	4592
+	"Kentucky"	"21"	"2017"	"2017"	"June"	"6"	4509
+	"Kentucky"	"21"	"2017"	"2017"	"July"	"7"	4807
+	"Kentucky"	"21"	"2017"	"2017"	"August"	"8"	5095
+	"Kentucky"	"21"	"2017"	"2017"	"September"	"9"	4946
+	"Kentucky"	"21"	"2017"	"2017"	"October"	"10"	4729
+	"Kentucky"	"21"	"2017"	"2017"	"November"	"11"	4469
+	"Kentucky"	"21"	"2017"	"2017"	"December"	"12"	4499
+	"Louisiana"	"22"	"2017"	"2017"	"January"	"1"	5172
+	"Louisiana"	"22"	"2017"	"2017"	"February"	"2"	4443
+	"Louisiana"	"22"	"2017"	"2017"	"March"	"3"	4925
+	"Louisiana"	"22"	"2017"	"2017"	"April"	"4"	4578
+	"Louisiana"	"22"	"2017"	"2017"	"May"	"5"	4863
+	"Louisiana"	"22"	"2017"	"2017"	"June"	"6"	4976
+	"Louisiana"	"22"	"2017"	"2017"	"July"	"7"	5224
+	"Louisiana"	"22"	"2017"	"2017"	"August"	"8"	5910
+	"Louisiana"	"22"	"2017"	"2017"	"September"	"9"	5451
+	"Louisiana"	"22"	"2017"	"2017"	"October"	"10"	5227
+	"Louisiana"	"22"	"2017"	"2017"	"November"	"11"	5196
+	"Louisiana"	"22"	"2017"	"2017"	"December"	"12"	5053
+	"Maine"	"23"	"2017"	"2017"	"January"	"1"	899
+	"Maine"	"23"	"2017"	"2017"	"February"	"2"	891
+	"Maine"	"23"	"2017"	"2017"	"March"	"3"	1070
+	"Maine"	"23"	"2017"	"2017"	"April"	"4"	998
+	"Maine"	"23"	"2017"	"2017"	"May"	"5"	1086
+	"Maine"	"23"	"2017"	"2017"	"June"	"6"	1050
+	"Maine"	"23"	"2017"	"2017"	"July"	"7"	1092
+	"Maine"	"23"	"2017"	"2017"	"August"	"8"	1155
+	"Maine"	"23"	"2017"	"2017"	"September"	"9"	1068
+	"Maine"	"23"	"2017"	"2017"	"October"	"10"	1024
+	"Maine"	"23"	"2017"	"2017"	"November"	"11"	957
+	"Maine"	"23"	"2017"	"2017"	"December"	"12"	1008
+	"Maryland"	"24"	"2017"	"2017"	"January"	"1"	5692
+	"Maryland"	"24"	"2017"	"2017"	"February"	"2"	5228
+	"Maryland"	"24"	"2017"	"2017"	"March"	"3"	5826
+	"Maryland"	"24"	"2017"	"2017"	"April"	"4"	5621
+	"Maryland"	"24"	"2017"	"2017"	"May"	"5"	6007
+	"Maryland"	"24"	"2017"	"2017"	"June"	"6"	6087
+	"Maryland"	"24"	"2017"	"2017"	"July"	"7"	6349
+	"Maryland"	"24"	"2017"	"2017"	"August"	"8"	6682
+	"Maryland"	"24"	"2017"	"2017"	"September"	"9"	6027
+	"Maryland"	"24"	"2017"	"2017"	"October"	"10"	6258
+	"Maryland"	"24"	"2017"	"2017"	"November"	"11"	5936
+	"Maryland"	"24"	"2017"	"2017"	"December"	"12"	5928
+	"Massachusetts"	"25"	"2017"	"2017"	"January"	"1"	5579
+	"Massachusetts"	"25"	"2017"	"2017"	"February"	"2"	5177
+	"Massachusetts"	"25"	"2017"	"2017"	"March"	"3"	5891
+	"Massachusetts"	"25"	"2017"	"2017"	"April"	"4"	5643
+	"Massachusetts"	"25"	"2017"	"2017"	"May"	"5"	6021
+	"Massachusetts"	"25"	"2017"	"2017"	"June"	"6"	6125
+	"Massachusetts"	"25"	"2017"	"2017"	"July"	"7"	6283
+	"Massachusetts"	"25"	"2017"	"2017"	"August"	"8"	6418
+	"Massachusetts"	"25"	"2017"	"2017"	"September"	"9"	6048
+	"Massachusetts"	"25"	"2017"	"2017"	"October"	"10"	6111
+	"Massachusetts"	"25"	"2017"	"2017"	"November"	"11"	5705
+	"Massachusetts"	"25"	"2017"	"2017"	"December"	"12"	5701
+	"Michigan"	"26"	"2017"	"2017"	"January"	"1"	9017
+	"Michigan"	"26"	"2017"	"2017"	"February"	"2"	8403
+	"Michigan"	"26"	"2017"	"2017"	"March"	"3"	9352
+	"Michigan"	"26"	"2017"	"2017"	"April"	"4"	8831
+	"Michigan"	"26"	"2017"	"2017"	"May"	"5"	9621
+	"Michigan"	"26"	"2017"	"2017"	"June"	"6"	9613
+	"Michigan"	"26"	"2017"	"2017"	"July"	"7"	9836
+	"Michigan"	"26"	"2017"	"2017"	"August"	"8"	10214
+	"Michigan"	"26"	"2017"	"2017"	"September"	"9"	9536
+	"Michigan"	"26"	"2017"	"2017"	"October"	"10"	9264
+	"Michigan"	"26"	"2017"	"2017"	"November"	"11"	8834
+	"Michigan"	"26"	"2017"	"2017"	"December"	"12"	8905
+	"Minnesota"	"27"	"2017"	"2017"	"January"	"1"	5377
+	"Minnesota"	"27"	"2017"	"2017"	"February"	"2"	5116
+	"Minnesota"	"27"	"2017"	"2017"	"March"	"3"	5780
+	"Minnesota"	"27"	"2017"	"2017"	"April"	"4"	5612
+	"Minnesota"	"27"	"2017"	"2017"	"May"	"5"	6116
+	"Minnesota"	"27"	"2017"	"2017"	"June"	"6"	6063
+	"Minnesota"	"27"	"2017"	"2017"	"July"	"7"	6019
+	"Minnesota"	"27"	"2017"	"2017"	"August"	"8"	6187
+	"Minnesota"	"27"	"2017"	"2017"	"September"	"9"	5830
+	"Minnesota"	"27"	"2017"	"2017"	"October"	"10"	5670
+	"Minnesota"	"27"	"2017"	"2017"	"November"	"11"	5394
+	"Minnesota"	"27"	"2017"	"2017"	"December"	"12"	5431
+	"Mississippi"	"28"	"2017"	"2017"	"January"	"1"	3168
+	"Mississippi"	"28"	"2017"	"2017"	"February"	"2"	2818
+	"Mississippi"	"28"	"2017"	"2017"	"March"	"3"	3027
+	"Mississippi"	"28"	"2017"	"2017"	"April"	"4"	2613
+	"Mississippi"	"28"	"2017"	"2017"	"May"	"5"	3013
+	"Mississippi"	"28"	"2017"	"2017"	"June"	"6"	3044
+	"Mississippi"	"28"	"2017"	"2017"	"July"	"7"	3244
+	"Mississippi"	"28"	"2017"	"2017"	"August"	"8"	3533
+	"Mississippi"	"28"	"2017"	"2017"	"September"	"9"	3321
+	"Mississippi"	"28"	"2017"	"2017"	"October"	"10"	3161
+	"Mississippi"	"28"	"2017"	"2017"	"November"	"11"	3230
+	"Mississippi"	"28"	"2017"	"2017"	"December"	"12"	3185
+	"Missouri"	"29"	"2017"	"2017"	"January"	"1"	5839
+	"Missouri"	"29"	"2017"	"2017"	"February"	"2"	5472
+	"Missouri"	"29"	"2017"	"2017"	"March"	"3"	6011
+	"Missouri"	"29"	"2017"	"2017"	"April"	"4"	5639
+	"Missouri"	"29"	"2017"	"2017"	"May"	"5"	6200
+	"Missouri"	"29"	"2017"	"2017"	"June"	"6"	6226
+	"Missouri"	"29"	"2017"	"2017"	"July"	"7"	6397
+	"Missouri"	"29"	"2017"	"2017"	"August"	"8"	6679
+	"Missouri"	"29"	"2017"	"2017"	"September"	"9"	6381
+	"Missouri"	"29"	"2017"	"2017"	"October"	"10"	6206
+	"Missouri"	"29"	"2017"	"2017"	"November"	"11"	6031
+	"Missouri"	"29"	"2017"	"2017"	"December"	"12"	5953
+	"Montana"	"30"	"2017"	"2017"	"January"	"1"	967
+	"Montana"	"30"	"2017"	"2017"	"February"	"2"	852
+	"Montana"	"30"	"2017"	"2017"	"March"	"3"	1035
+	"Montana"	"30"	"2017"	"2017"	"April"	"4"	956
+	"Montana"	"30"	"2017"	"2017"	"May"	"5"	1082
+	"Montana"	"30"	"2017"	"2017"	"June"	"6"	1053
+	"Montana"	"30"	"2017"	"2017"	"July"	"7"	1015
+	"Montana"	"30"	"2017"	"2017"	"August"	"8"	1040
+	"Montana"	"30"	"2017"	"2017"	"September"	"9"	977
+	"Montana"	"30"	"2017"	"2017"	"October"	"10"	959
+	"Montana"	"30"	"2017"	"2017"	"November"	"11"	903
+	"Montana"	"30"	"2017"	"2017"	"December"	"12"	960
+	"Nebraska"	"31"	"2017"	"2017"	"January"	"1"	2047
+	"Nebraska"	"31"	"2017"	"2017"	"February"	"2"	1892
+	"Nebraska"	"31"	"2017"	"2017"	"March"	"3"	2133
+	"Nebraska"	"31"	"2017"	"2017"	"April"	"4"	2097
+	"Nebraska"	"31"	"2017"	"2017"	"May"	"5"	2210
+	"Nebraska"	"31"	"2017"	"2017"	"June"	"6"	2323
+	"Nebraska"	"31"	"2017"	"2017"	"July"	"7"	2178
+	"Nebraska"	"31"	"2017"	"2017"	"August"	"8"	2343
+	"Nebraska"	"31"	"2017"	"2017"	"September"	"9"	2172
+	"Nebraska"	"31"	"2017"	"2017"	"October"	"10"	2242
+	"Nebraska"	"31"	"2017"	"2017"	"November"	"11"	2052
+	"Nebraska"	"31"	"2017"	"2017"	"December"	"12"	2132
+	"Nevada"	"32"	"2017"	"2017"	"January"	"1"	2986
+	"Nevada"	"32"	"2017"	"2017"	"February"	"2"	2668
+	"Nevada"	"32"	"2017"	"2017"	"March"	"3"	2873
+	"Nevada"	"32"	"2017"	"2017"	"April"	"4"	2768
+	"Nevada"	"32"	"2017"	"2017"	"May"	"5"	3025
+	"Nevada"	"32"	"2017"	"2017"	"June"	"6"	3058
+	"Nevada"	"32"	"2017"	"2017"	"July"	"7"	3102
+	"Nevada"	"32"	"2017"	"2017"	"August"	"8"	3148
+	"Nevada"	"32"	"2017"	"2017"	"September"	"9"	3162
+	"Nevada"	"32"	"2017"	"2017"	"October"	"10"	3085
+	"Nevada"	"32"	"2017"	"2017"	"November"	"11"	2948
+	"Nevada"	"32"	"2017"	"2017"	"December"	"12"	2933
+	"New Hampshire"	"33"	"2017"	"2017"	"January"	"1"	931
+	"New Hampshire"	"33"	"2017"	"2017"	"February"	"2"	895
+	"New Hampshire"	"33"	"2017"	"2017"	"March"	"3"	963
+	"New Hampshire"	"33"	"2017"	"2017"	"April"	"4"	992
+	"New Hampshire"	"33"	"2017"	"2017"	"May"	"5"	1086
+	"New Hampshire"	"33"	"2017"	"2017"	"June"	"6"	1108
+	"New Hampshire"	"33"	"2017"	"2017"	"July"	"7"	1093
+	"New Hampshire"	"33"	"2017"	"2017"	"August"	"8"	1088
+	"New Hampshire"	"33"	"2017"	"2017"	"September"	"9"	1054
+	"New Hampshire"	"33"	"2017"	"2017"	"October"	"10"	1025
+	"New Hampshire"	"33"	"2017"	"2017"	"November"	"11"	962
+	"New Hampshire"	"33"	"2017"	"2017"	"December"	"12"	919
+	"New Jersey"	"34"	"2017"	"2017"	"January"	"1"	8020
+	"New Jersey"	"34"	"2017"	"2017"	"February"	"2"	7509
+	"New Jersey"	"34"	"2017"	"2017"	"March"	"3"	8496
+	"New Jersey"	"34"	"2017"	"2017"	"April"	"4"	7782
+	"New Jersey"	"34"	"2017"	"2017"	"May"	"5"	8531
+	"New Jersey"	"34"	"2017"	"2017"	"June"	"6"	8652
+	"New Jersey"	"34"	"2017"	"2017"	"July"	"7"	8920
+	"New Jersey"	"34"	"2017"	"2017"	"August"	"8"	9175
+	"New Jersey"	"34"	"2017"	"2017"	"September"	"9"	8735
+	"New Jersey"	"34"	"2017"	"2017"	"October"	"10"	8640
+	"New Jersey"	"34"	"2017"	"2017"	"November"	"11"	8502
+	"New Jersey"	"34"	"2017"	"2017"	"December"	"12"	8288
+	"New Mexico"	"35"	"2017"	"2017"	"January"	"1"	1990
+	"New Mexico"	"35"	"2017"	"2017"	"February"	"2"	1838
+	"New Mexico"	"35"	"2017"	"2017"	"March"	"3"	2046
+	"New Mexico"	"35"	"2017"	"2017"	"April"	"4"	1828
+	"New Mexico"	"35"	"2017"	"2017"	"May"	"5"	1954
+	"New Mexico"	"35"	"2017"	"2017"	"June"	"6"	1960
+	"New Mexico"	"35"	"2017"	"2017"	"July"	"7"	2123
+	"New Mexico"	"35"	"2017"	"2017"	"August"	"8"	2166
+	"New Mexico"	"35"	"2017"	"2017"	"September"	"9"	2097
+	"New Mexico"	"35"	"2017"	"2017"	"October"	"10"	2005
+	"New Mexico"	"35"	"2017"	"2017"	"November"	"11"	1877
+	"New Mexico"	"35"	"2017"	"2017"	"December"	"12"	1883
+	"New York"	"36"	"2017"	"2017"	"January"	"1"	18577
+	"New York"	"36"	"2017"	"2017"	"February"	"2"	17235
+	"New York"	"36"	"2017"	"2017"	"March"	"3"	19007
+	"New York"	"36"	"2017"	"2017"	"April"	"4"	18288
+	"New York"	"36"	"2017"	"2017"	"May"	"5"	19249
+	"New York"	"36"	"2017"	"2017"	"June"	"6"	19498
+	"New York"	"36"	"2017"	"2017"	"July"	"7"	20266
+	"New York"	"36"	"2017"	"2017"	"August"	"8"	20511
+	"New York"	"36"	"2017"	"2017"	"September"	"9"	19843
+	"New York"	"36"	"2017"	"2017"	"October"	"10"	19657
+	"New York"	"36"	"2017"	"2017"	"November"	"11"	18981
+	"New York"	"36"	"2017"	"2017"	"December"	"12"	18625
+	"North Carolina"	"37"	"2017"	"2017"	"January"	"1"	9670
+	"North Carolina"	"37"	"2017"	"2017"	"February"	"2"	8935
+	"North Carolina"	"37"	"2017"	"2017"	"March"	"3"	9869
+	"North Carolina"	"37"	"2017"	"2017"	"April"	"4"	9145
+	"North Carolina"	"37"	"2017"	"2017"	"May"	"5"	9802
+	"North Carolina"	"37"	"2017"	"2017"	"June"	"6"	10042
+	"North Carolina"	"37"	"2017"	"2017"	"July"	"7"	10421
+	"North Carolina"	"37"	"2017"	"2017"	"August"	"8"	11199
+	"North Carolina"	"37"	"2017"	"2017"	"September"	"9"	10682
+	"North Carolina"	"37"	"2017"	"2017"	"October"	"10"	10255
+	"North Carolina"	"37"	"2017"	"2017"	"November"	"11"	10112
+	"North Carolina"	"37"	"2017"	"2017"	"December"	"12"	9993
+	"North Dakota"	"38"	"2017"	"2017"	"January"	"1"	840
+	"North Dakota"	"38"	"2017"	"2017"	"February"	"2"	814
+	"North Dakota"	"38"	"2017"	"2017"	"March"	"3"	932
+	"North Dakota"	"38"	"2017"	"2017"	"April"	"4"	918
+	"North Dakota"	"38"	"2017"	"2017"	"May"	"5"	895
+	"North Dakota"	"38"	"2017"	"2017"	"June"	"6"	922
+	"North Dakota"	"38"	"2017"	"2017"	"July"	"7"	902
+	"North Dakota"	"38"	"2017"	"2017"	"August"	"8"	915
+	"North Dakota"	"38"	"2017"	"2017"	"September"	"9"	933
+	"North Dakota"	"38"	"2017"	"2017"	"October"	"10"	915
+	"North Dakota"	"38"	"2017"	"2017"	"November"	"11"	871
+	"North Dakota"	"38"	"2017"	"2017"	"December"	"12"	880
+	"Ohio"	"39"	"2017"	"2017"	"January"	"1"	10928
+	"Ohio"	"39"	"2017"	"2017"	"February"	"2"	10146
+	"Ohio"	"39"	"2017"	"2017"	"March"	"3"	11414
+	"Ohio"	"39"	"2017"	"2017"	"April"	"4"	10729
+	"Ohio"	"39"	"2017"	"2017"	"May"	"5"	11541
+	"Ohio"	"39"	"2017"	"2017"	"June"	"6"	11634
+	"Ohio"	"39"	"2017"	"2017"	"July"	"7"	11945
+	"Ohio"	"39"	"2017"	"2017"	"August"	"8"	12474
+	"Ohio"	"39"	"2017"	"2017"	"September"	"9"	12047
+	"Ohio"	"39"	"2017"	"2017"	"October"	"10"	11785
+	"Ohio"	"39"	"2017"	"2017"	"November"	"11"	11046
+	"Ohio"	"39"	"2017"	"2017"	"December"	"12"	11143
+	"Oklahoma"	"40"	"2017"	"2017"	"January"	"1"	4057
+	"Oklahoma"	"40"	"2017"	"2017"	"February"	"2"	3764
+	"Oklahoma"	"40"	"2017"	"2017"	"March"	"3"	4170
+	"Oklahoma"	"40"	"2017"	"2017"	"April"	"4"	3772
+	"Oklahoma"	"40"	"2017"	"2017"	"May"	"5"	4280
+	"Oklahoma"	"40"	"2017"	"2017"	"June"	"6"	4275
+	"Oklahoma"	"40"	"2017"	"2017"	"July"	"7"	4288
+	"Oklahoma"	"40"	"2017"	"2017"	"August"	"8"	4644
+	"Oklahoma"	"40"	"2017"	"2017"	"September"	"9"	4453
+	"Oklahoma"	"40"	"2017"	"2017"	"October"	"10"	4317
+	"Oklahoma"	"40"	"2017"	"2017"	"November"	"11"	4081
+	"Oklahoma"	"40"	"2017"	"2017"	"December"	"12"	4113
+	"Oregon"	"41"	"2017"	"2017"	"January"	"1"	3491
+	"Oregon"	"41"	"2017"	"2017"	"February"	"2"	3256
+	"Oregon"	"41"	"2017"	"2017"	"March"	"3"	3665
+	"Oregon"	"41"	"2017"	"2017"	"April"	"4"	3571
+	"Oregon"	"41"	"2017"	"2017"	"May"	"5"	3867
+	"Oregon"	"41"	"2017"	"2017"	"June"	"6"	3776
+	"Oregon"	"41"	"2017"	"2017"	"July"	"7"	3802
+	"Oregon"	"41"	"2017"	"2017"	"August"	"8"	3903
+	"Oregon"	"41"	"2017"	"2017"	"September"	"9"	3770
+	"Oregon"	"41"	"2017"	"2017"	"October"	"10"	3603
+	"Oregon"	"41"	"2017"	"2017"	"November"	"11"	3416
+	"Oregon"	"41"	"2017"	"2017"	"December"	"12"	3511
+	"Pennsylvania"	"42"	"2017"	"2017"	"January"	"1"	11048
+	"Pennsylvania"	"42"	"2017"	"2017"	"February"	"2"	10274
+	"Pennsylvania"	"42"	"2017"	"2017"	"March"	"3"	11374
+	"Pennsylvania"	"42"	"2017"	"2017"	"April"	"4"	10962
+	"Pennsylvania"	"42"	"2017"	"2017"	"May"	"5"	11623
+	"Pennsylvania"	"42"	"2017"	"2017"	"June"	"6"	11600
+	"Pennsylvania"	"42"	"2017"	"2017"	"July"	"7"	12017
+	"Pennsylvania"	"42"	"2017"	"2017"	"August"	"8"	12580
+	"Pennsylvania"	"42"	"2017"	"2017"	"September"	"9"	12289
+	"Pennsylvania"	"42"	"2017"	"2017"	"October"	"10"	11882
+	"Pennsylvania"	"42"	"2017"	"2017"	"November"	"11"	10932
+	"Pennsylvania"	"42"	"2017"	"2017"	"December"	"12"	11164
+	"Rhode Island"	"44"	"2017"	"2017"	"January"	"1"	801
+	"Rhode Island"	"44"	"2017"	"2017"	"February"	"2"	807
+	"Rhode Island"	"44"	"2017"	"2017"	"March"	"3"	859
+	"Rhode Island"	"44"	"2017"	"2017"	"April"	"4"	848
+	"Rhode Island"	"44"	"2017"	"2017"	"May"	"5"	862
+	"Rhode Island"	"44"	"2017"	"2017"	"June"	"6"	911
+	"Rhode Island"	"44"	"2017"	"2017"	"July"	"7"	964
+	"Rhode Island"	"44"	"2017"	"2017"	"August"	"8"	996
+	"Rhode Island"	"44"	"2017"	"2017"	"September"	"9"	943
+	"Rhode Island"	"44"	"2017"	"2017"	"October"	"10"	915
+	"Rhode Island"	"44"	"2017"	"2017"	"November"	"11"	863
+	"Rhode Island"	"44"	"2017"	"2017"	"December"	"12"	869
+	"South Carolina"	"45"	"2017"	"2017"	"January"	"1"	4681
+	"South Carolina"	"45"	"2017"	"2017"	"February"	"2"	4310
+	"South Carolina"	"45"	"2017"	"2017"	"March"	"3"	4782
+	"South Carolina"	"45"	"2017"	"2017"	"April"	"4"	4279
+	"South Carolina"	"45"	"2017"	"2017"	"May"	"5"	4639
+	"South Carolina"	"45"	"2017"	"2017"	"June"	"6"	4690
+	"South Carolina"	"45"	"2017"	"2017"	"July"	"7"	4898
+	"South Carolina"	"45"	"2017"	"2017"	"August"	"8"	5353
+	"South Carolina"	"45"	"2017"	"2017"	"September"	"9"	5079
+	"South Carolina"	"45"	"2017"	"2017"	"October"	"10"	4869
+	"South Carolina"	"45"	"2017"	"2017"	"November"	"11"	4738
+	"South Carolina"	"45"	"2017"	"2017"	"December"	"12"	4711
+	"South Dakota"	"46"	"2017"	"2017"	"January"	"1"	948
+	"South Dakota"	"46"	"2017"	"2017"	"February"	"2"	923
+	"South Dakota"	"46"	"2017"	"2017"	"March"	"3"	1016
+	"South Dakota"	"46"	"2017"	"2017"	"April"	"4"	960
+	"South Dakota"	"46"	"2017"	"2017"	"May"	"5"	1073
+	"South Dakota"	"46"	"2017"	"2017"	"June"	"6"	1059
+	"South Dakota"	"46"	"2017"	"2017"	"July"	"7"	1089
+	"South Dakota"	"46"	"2017"	"2017"	"August"	"8"	1120
+	"South Dakota"	"46"	"2017"	"2017"	"September"	"9"	1021
+	"South Dakota"	"46"	"2017"	"2017"	"October"	"10"	1038
+	"South Dakota"	"46"	"2017"	"2017"	"November"	"11"	945
+	"South Dakota"	"46"	"2017"	"2017"	"December"	"12"	942
+	"Tennessee"	"47"	"2017"	"2017"	"January"	"1"	6650
+	"Tennessee"	"47"	"2017"	"2017"	"February"	"2"	6204
+	"Tennessee"	"47"	"2017"	"2017"	"March"	"3"	6610
+	"Tennessee"	"47"	"2017"	"2017"	"April"	"4"	6057
+	"Tennessee"	"47"	"2017"	"2017"	"May"	"5"	6623
+	"Tennessee"	"47"	"2017"	"2017"	"June"	"6"	6661
+	"Tennessee"	"47"	"2017"	"2017"	"July"	"7"	7059
+	"Tennessee"	"47"	"2017"	"2017"	"August"	"8"	7563
+	"Tennessee"	"47"	"2017"	"2017"	"September"	"9"	7123
+	"Tennessee"	"47"	"2017"	"2017"	"October"	"10"	7111
+	"Tennessee"	"47"	"2017"	"2017"	"November"	"11"	6695
+	"Tennessee"	"47"	"2017"	"2017"	"December"	"12"	6660
+	"Texas"	"48"	"2017"	"2017"	"January"	"1"	31612
+	"Texas"	"48"	"2017"	"2017"	"February"	"2"	28586
+	"Texas"	"48"	"2017"	"2017"	"March"	"3"	31048
+	"Texas"	"48"	"2017"	"2017"	"April"	"4"	28879
+	"Texas"	"48"	"2017"	"2017"	"May"	"5"	31172
+	"Texas"	"48"	"2017"	"2017"	"June"	"6"	31570
+	"Texas"	"48"	"2017"	"2017"	"July"	"7"	32582
+	"Texas"	"48"	"2017"	"2017"	"August"	"8"	35028
+	"Texas"	"48"	"2017"	"2017"	"September"	"9"	34122
+	"Texas"	"48"	"2017"	"2017"	"October"	"10"	33358
+	"Texas"	"48"	"2017"	"2017"	"November"	"11"	32146
+	"Texas"	"48"	"2017"	"2017"	"December"	"12"	31947
+	"Utah"	"49"	"2017"	"2017"	"January"	"1"	3753
+	"Utah"	"49"	"2017"	"2017"	"February"	"2"	3617
+	"Utah"	"49"	"2017"	"2017"	"March"	"3"	4162
+	"Utah"	"49"	"2017"	"2017"	"April"	"4"	4010
+	"Utah"	"49"	"2017"	"2017"	"May"	"5"	4363
+	"Utah"	"49"	"2017"	"2017"	"June"	"6"	4367
+	"Utah"	"49"	"2017"	"2017"	"July"	"7"	4307
+	"Utah"	"49"	"2017"	"2017"	"August"	"8"	4416
+	"Utah"	"49"	"2017"	"2017"	"September"	"9"	4094
+	"Utah"	"49"	"2017"	"2017"	"October"	"10"	3946
+	"Utah"	"49"	"2017"	"2017"	"November"	"11"	3835
+	"Utah"	"49"	"2017"	"2017"	"December"	"12"	3715
+	"Vermont"	"50"	"2017"	"2017"	"January"	"1"	501
+	"Vermont"	"50"	"2017"	"2017"	"February"	"2"	379
+	"Vermont"	"50"	"2017"	"2017"	"March"	"3"	448
+	"Vermont"	"50"	"2017"	"2017"	"April"	"4"	487
+	"Vermont"	"50"	"2017"	"2017"	"May"	"5"	479
+	"Vermont"	"50"	"2017"	"2017"	"June"	"6"	551
+	"Vermont"	"50"	"2017"	"2017"	"July"	"7"	481
+	"Vermont"	"50"	"2017"	"2017"	"August"	"8"	514
+	"Vermont"	"50"	"2017"	"2017"	"September"	"9"	468
+	"Vermont"	"50"	"2017"	"2017"	"October"	"10"	490
+	"Vermont"	"50"	"2017"	"2017"	"November"	"11"	457
+	"Vermont"	"50"	"2017"	"2017"	"December"	"12"	400
+	"Virginia"	"51"	"2017"	"2017"	"January"	"1"	8119
+	"Virginia"	"51"	"2017"	"2017"	"February"	"2"	7214
+	"Virginia"	"51"	"2017"	"2017"	"March"	"3"	8377
+	"Virginia"	"51"	"2017"	"2017"	"April"	"4"	7674
+	"Virginia"	"51"	"2017"	"2017"	"May"	"5"	8441
+	"Virginia"	"51"	"2017"	"2017"	"June"	"6"	8521
+	"Virginia"	"51"	"2017"	"2017"	"July"	"7"	8653
+	"Virginia"	"51"	"2017"	"2017"	"August"	"8"	9232
+	"Virginia"	"51"	"2017"	"2017"	"September"	"9"	8994
+	"Virginia"	"51"	"2017"	"2017"	"October"	"10"	8723
+	"Virginia"	"51"	"2017"	"2017"	"November"	"11"	8286
+	"Virginia"	"51"	"2017"	"2017"	"December"	"12"	8157
+	"Washington"	"53"	"2017"	"2017"	"January"	"1"	7078
+	"Washington"	"53"	"2017"	"2017"	"February"	"2"	6613
+	"Washington"	"53"	"2017"	"2017"	"March"	"3"	7301
+	"Washington"	"53"	"2017"	"2017"	"April"	"4"	7187
+	"Washington"	"53"	"2017"	"2017"	"May"	"5"	7674
+	"Washington"	"53"	"2017"	"2017"	"June"	"6"	7495
+	"Washington"	"53"	"2017"	"2017"	"July"	"7"	7695
+	"Washington"	"53"	"2017"	"2017"	"August"	"8"	7807
+	"Washington"	"53"	"2017"	"2017"	"September"	"9"	7471
+	"Washington"	"53"	"2017"	"2017"	"October"	"10"	7233
+	"Washington"	"53"	"2017"	"2017"	"November"	"11"	7095
+	"Washington"	"53"	"2017"	"2017"	"December"	"12"	6913
+	"West Virginia"	"54"	"2017"	"2017"	"January"	"1"	1533
+	"West Virginia"	"54"	"2017"	"2017"	"February"	"2"	1489
+	"West Virginia"	"54"	"2017"	"2017"	"March"	"3"	1552
+	"West Virginia"	"54"	"2017"	"2017"	"April"	"4"	1396
+	"West Virginia"	"54"	"2017"	"2017"	"May"	"5"	1575
+	"West Virginia"	"54"	"2017"	"2017"	"June"	"6"	1582
+	"West Virginia"	"54"	"2017"	"2017"	"July"	"7"	1655
+	"West Virginia"	"54"	"2017"	"2017"	"August"	"8"	1738
+	"West Virginia"	"54"	"2017"	"2017"	"September"	"9"	1638
+	"West Virginia"	"54"	"2017"	"2017"	"October"	"10"	1495
+	"West Virginia"	"54"	"2017"	"2017"	"November"	"11"	1512
+	"West Virginia"	"54"	"2017"	"2017"	"December"	"12"	1510
+	"Wisconsin"	"55"	"2017"	"2017"	"January"	"1"	5090
+	"Wisconsin"	"55"	"2017"	"2017"	"February"	"2"	4921
+	"Wisconsin"	"55"	"2017"	"2017"	"March"	"3"	5613
+	"Wisconsin"	"55"	"2017"	"2017"	"April"	"4"	5286
+	"Wisconsin"	"55"	"2017"	"2017"	"May"	"5"	5598
+	"Wisconsin"	"55"	"2017"	"2017"	"June"	"6"	5632
+	"Wisconsin"	"55"	"2017"	"2017"	"July"	"7"	5674
+	"Wisconsin"	"55"	"2017"	"2017"	"August"	"8"	5925
+	"Wisconsin"	"55"	"2017"	"2017"	"September"	"9"	5490
+	"Wisconsin"	"55"	"2017"	"2017"	"October"	"10"	5329
+	"Wisconsin"	"55"	"2017"	"2017"	"November"	"11"	5071
+	"Wisconsin"	"55"	"2017"	"2017"	"December"	"12"	5346
+	"Wyoming"	"56"	"2017"	"2017"	"January"	"1"	536
+	"Wyoming"	"56"	"2017"	"2017"	"February"	"2"	531
+	"Wyoming"	"56"	"2017"	"2017"	"March"	"3"	587
+	"Wyoming"	"56"	"2017"	"2017"	"April"	"4"	573
+	"Wyoming"	"56"	"2017"	"2017"	"May"	"5"	659
+	"Wyoming"	"56"	"2017"	"2017"	"June"	"6"	596
+	"Wyoming"	"56"	"2017"	"2017"	"July"	"7"	600
+	"Wyoming"	"56"	"2017"	"2017"	"August"	"8"	611
+	"Wyoming"	"56"	"2017"	"2017"	"September"	"9"	540
+	"Wyoming"	"56"	"2017"	"2017"	"October"	"10"	564
+	"Wyoming"	"56"	"2017"	"2017"	"November"	"11"	560
+	"Wyoming"	"56"	"2017"	"2017"	"December"	"12"	546
+"---"
+"Dataset: Natality, 2007-2017"
+"Query Parameters:"
+"Year: 2017"
+"Group By: State; Year; Month"
+"Show Totals: False"
+"Show Zero Values: False"
+"Show Suppressed: False"
+"Calculate Rates Per: 1,000"
+"Population Option: No populations shown because rates were not selected."
+"---"
+"Help: See http://wonder.cdc.gov/wonder/help/Natality.html for more information."
+"---"
+"Query Date: Sep 4, 2019 3:21:53 PM"
+"---"
+"Suggested Citation: United States Department of Health and Human Services (US DHHS), Centers for Disease Control and Prevention"
+"(CDC), National Center for Health Statistics (NCHS), Division of Vital Statistics, Natality public-use data 2007-2017, on CDC"
+"WONDER Online Database, October 2018. Accessed at http://wonder.cdc.gov/natality-current.html on Sep 4, 2019 3:21:53 PM"
+"---"
+Caveats:
+"1. Each birth record represents one living baby."

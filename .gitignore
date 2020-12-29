@@ -1,0 +1,9 @@
+## latex files
+si.*
+figs.log
+## knitr output dirs
+figure/
+output/
+## knitr cache
+cache/
+
