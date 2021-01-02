@@ -1,6 +1,10 @@
 # influenzaB_PNAS_2021
 This repository contains the data and code used to analyze the 2019/2020 influenza season in the United States.
 
+[![DOI](https://zenodo.org/badge/325383176.svg)](https://zenodo.org/badge/latestdoi/325383176)
+
+
+
 ## Data
 * FluView Data: most recently accesed Febrary 28, 2020.
 * FluView Data: accesed January 31, 2020, February 4, 2020
